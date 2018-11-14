@@ -1,0 +1,43 @@
+﻿@model SA.Utils.Outlook
+
+@{
+    ViewBag.Title = "View Inbox Emails";
+}
+
+<h2>View</h2>
+
+<h3>Inbox Emails</h3>
+@foreach (var item in ViewBag.inboxEmails)
+{
+    <div>
+        @item.DateTimeReceived
+    </div>
+    <div>
+        @item.Subject
+    </div>
+    <hr />
+}
+
+<h3>Specified Folder Emails</h3>
+@foreach (var item in ViewBag.folderEmails)
+{
+    <div>
+        @item.DateTimeReceived
+    </div>
+    <div>
+        @item.Subject
+    </div>
+    <hr />
+}
+
+<h3>Filtered Emails</h3>
+@foreach (var item in ViewBag.FilteredEmails)
+{
+    <div>
+        @item.DateTimeReceived
+    </div>
+    <div>
+        @item.Subject
+    </div>
+    <hr />
+}
